@@ -22,7 +22,7 @@ if __name__ == "__main__":
             "Text Rank: From Python lib sumy",
         ],
     )
-    st.info('Hit: Ctrl + Enter to get summary', icon="ℹ️")
+    st.info('Hit: Ctrl + Enter to get summary OR click anywhere outside after adding and selection everything', icon="ℹ️")
     text_to_summarize = st.text_area("Enter your text to summarize")
     no_of_sentence_on_output = st.number_input('No. of sentences on output you want', min_value=2, max_value=100)
     st.write("Selected Model: ", model_selection)

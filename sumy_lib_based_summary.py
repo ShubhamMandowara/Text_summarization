@@ -10,7 +10,7 @@ from typing import List
 nltk.download("punkt")
 
 
-def common_process(text: str):
+def common_process(text: str)-> str:
     """Function to convert text to lowercase and convert text to tokens using parser
         Arguments:
             text (str): text to convert
@@ -21,21 +21,23 @@ def common_process(text: str):
     parser = PlaintextParser.from_string(text, Tokenizer("english"))
     return parser
 
-def common_return_process(summary:List):
+def common_return_process(summary):
     summary = ''
     for sentence in summary:
         summary += " " + sentence
     return summary
 
-def main(text, model_name, sentence_on_output:int=2) -> str:
+def main(text, model_name:str, sentence_on_output:int=2) -> str:
     """Main function to summarize the text using sumy lib
         Arguments:
             text (str): text to summarize
+            model_name (str): name of the model
             sentence_on_output (int): Number of sentences on output
         Returns:
             str: Summary of text
     """
     summarizer = None
+    print(model_name)
     if model_name == 'Lex Rank':
         summarizer = LexRankSummarizer()
     elif model_name == 'LSA':
@@ -45,7 +47,9 @@ def main(text, model_name, sentence_on_output:int=2) -> str:
     else:
         raise 'Wrong model name / Model name is not defined'
     parser = common_process(text=text)
+    print('parsing is done')
     summary = summarizer(parser.document,sentence_on_output)
+    print(summary)
     return_text = common_return_process(summary=summary)
     print(return_text)
     return return_text
