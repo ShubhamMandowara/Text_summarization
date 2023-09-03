@@ -47,6 +47,10 @@ if __name__ == "__main__":
         "**Ctrl + Enter** to get summary OR click anywhere outside the input box after entering text",
         icon="ℹ️",
     )
+    st.info(
+        "**Select model from the left sidebase list **",
+        icon="ℹ️",
+    )
 
     text_to_summarize = st.text_area("Enter your text to summarize:")
     no_of_sentence_on_output = st.number_input(
