@@ -12,13 +12,6 @@ if __name__ == "__main__":
             "This app is designed by Shubham Mandowara to showcase text summarization using various techniques. You can select the model, and a text summary will be generated at the bottom"
         )
     st.sidebar.header("Select a model from the list 👇🏻:")
-    
-    st.sidebar.markdown('Follow me on linked to know more about AI, ML, DL, Generative AI, Deployment and MLOps')
-    
-    with st.sidebar:
-        column1, column2 = st.columns(2)
-        column1.markdown("[![Linkedin](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg)](https://www.linkedin.com/in/shubhammandowara/)")
-        column2.markdown("[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/ShubhamMandowara)")
     model_selection = st.sidebar.selectbox(
         "Choose a model",
         [
@@ -29,7 +22,15 @@ if __name__ == "__main__":
             "Text Rank: From Python lib sumy",
         ],
     )
-    st.info('INFO: Ctrl + Enter to get summary OR click anywhere outside once you enter everything', icon="ℹ️")
+    st.sidebar.write('Follow me to know more about AI, ML, DL, Generative AI, Deployment and MLOps')
+    
+    with st.sidebar:
+        column1, column2 = st.columns(2)
+        column1.markdown("[![Linkedin](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg)](https://www.linkedin.com/in/shubhammandowara/)")
+        column2.markdown("[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/ShubhamMandowara)")
+    
+    st.info('Ctrl + Enter to get summary OR click anywhere outside once you enter everything', icon="ℹ️")
+
     text_to_summarize = st.text_area("Enter your text to summarize")
     no_of_sentence_on_output = st.number_input('No. of sentences on output you want', min_value=2, max_value=100)
     st.write("Selected Model:- ", model_selection)
