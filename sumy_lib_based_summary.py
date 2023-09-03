@@ -5,7 +5,7 @@ from sumy.summarizers.text_rank import TextRankSummarizer
 from sumy.nlp.tokenizers import Tokenizer
 from helper.helper import convert_text_to_lowercase
 import nltk
-from typing import List
+from typing import List, Tuple
 
 nltk.download("punkt")
 
@@ -21,11 +21,17 @@ def common_process(text: str)-> str:
     parser = PlaintextParser.from_string(text, Tokenizer("english"))
     return parser
 
-def common_return_process(summary):
-    summary = ''
-    for sentence in summary:
-        summary += " " + sentence
-    return summary
+def common_return_process(text:Tuple) -> str:
+    """Function to join the text sentence
+        Arguments:
+            text (str): text to join
+        Returns:
+              str: summary
+    """
+    joined_sentence = ''
+    for t1 in text:
+      joined_sentence += " " + str(t1)
+    return joined_sentence
 
 def main(text:str, model_name:str, sentence_on_output:int=2) -> str:
     """Main function to summarize the text using sumy lib
@@ -34,7 +40,7 @@ def main(text:str, model_name:str, sentence_on_output:int=2) -> str:
             model_name (str): name of the model
             sentence_on_output (int): Number of sentences on output
         Returns:
-            str: Summary of text
+              str: Summary of text
     """
     summarizer = None
     if model_name == 'Lex Rank':
