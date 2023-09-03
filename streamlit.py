@@ -17,7 +17,7 @@ if __name__ == '__main__':
     if model_selection != '' and text_to_summarize != '':
         if model_selection  == 'Core Python algo(Frequency and Ranking based)':
             st.write('frequncy and ranking based python model')
-            st.write(text_to_summarize)
+            st.write(main(text=text_to_summarize))
         if model_selection  == 'Python lib sumy: lax':
             st.write('In progerss')
         if model_selection  == 'Python lib sumy: textrank':
