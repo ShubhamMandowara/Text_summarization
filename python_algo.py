@@ -11,11 +11,11 @@ stop_words = set(stopwords.words("english"))
 
 def main(text, sentence_on_output) -> str:
     """Main function to summarize the text using python based rank and frequency count of words
-        Arguments:
-            text (str): text to summarize
-            sentence_on_output (int): Number of sentences on output
-        Returns:
-            str: Summary of text
+    Arguments:
+        text (str): text to summarize
+        sentence_on_output (int): Number of sentences on output
+    Returns:
+        str: Summary of text
     """
     text = convert_text_to_lowercase(text=text)
     words = word_tokenize(text)
