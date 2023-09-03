@@ -7,9 +7,12 @@ if __name__ == "__main__":
     st.runtime.legacy_caching.clear_cache()
     st.set_page_config(layout="wide")
     st.title("Text Summarization ✍️")
-    st.sidebar.header("Its time learn the Summarization!")
+    st.sidebar.header(
+        "Its time learn the Summarization using different different model!"
+    )
+    st.sidebar.subheader("Select a model from the list 👇🏻:")
     model_selection = st.sidebar.selectbox(
-        "Select a model from the list 👇🏻:",
+        "",
         [
             "",
             "Core Python algo(Frequency and Ranking based)",
@@ -32,9 +35,11 @@ if __name__ == "__main__":
             "[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/ShubhamMandowara)"
         )
     st.sidebar.write("----")
-    st.sidebar.subheader("About this app")
+    st.sidebar.subheader("About this app:")
     st.sidebar.write(
-        "This app is designed by **Shubham Mandowara** to showcase text summarization using various techniques. You can select the model, and a text summary will be generated at the bottom"
+        "Designed by **Shubham Mandowara** to showcase text summarization using various techniques. You can select the model, and add text to summarize."
+    )
+    st.sidebar.write("I Hope you this was helpful, conntect me for any queries"
     )
 
     st.info(
