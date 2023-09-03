@@ -5,4 +5,4 @@ def convert_text_to_lowercase(text: str) -> str:
     return:
         str: Convert text to lowercase
     """
-    text = text.lower()
+    return text.lower()
