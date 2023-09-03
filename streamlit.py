@@ -1,7 +1,7 @@
 import streamlit as st
 from python_algo import main as python_main
 from sumy_lib_based_summary import main as sumy_main
-from transformers_based_summary import main as transformers_main
+# from transformers_based_summary import main as transformers_main
 
 if __name__ == "__main__":
     st.runtime.legacy_caching.clear_cache()
