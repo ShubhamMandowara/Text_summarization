@@ -29,16 +29,16 @@ if __name__ == "__main__":
     summary = st.write("Summary:")
     if model_selection != "" and text_to_summarize != "" and no_of_sentence_on_output != None:
         if model_selection == "Core Python algo(Frequency and Ranking based)":
-            print('Here :{model_selection}')
+            st.write('Here :{model_selection}')
             st.write(python_main(text=text_to_summarize, sentence_on_output=no_of_sentence_on_output))
         elif model_selection == "Lex Rank: From Python lib sumy":
-            print('Here :{model_selection}')
+            st.write('Here :{model_selection}')
             st.write(sumy_main(text=text_to_summarize, model_name='Lex Rank', sentence_on_output=no_of_sentence_on_output), )
         elif model_selection == "LSA: From Python lib sumy":
-            print('Here :{model_selection}')
+            st.write('Here :{model_selection}')
             st.write(sumy_main(text=text_to_summarize, model_name='LSA', sentence_on_output=no_of_sentence_on_output))
         elif model_selection == "Text Rank: From Python lib sumy":
-            print('Here :{model_selection}')
+            st.write('Here :{model_selection}')
             st.write(sumy_main(text=text_to_summarize, model_name='Text Rank', sentence_on_output=no_of_sentence_on_output))
         else:
             st.write('Not entering into any condition')
