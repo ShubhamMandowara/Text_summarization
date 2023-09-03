@@ -13,7 +13,7 @@ if __name__ == "__main__":
         )
     st.sidebar.header("Select a model from the list 👇🏻:")
     model_selection = st.sidebar.selectbox(
-        "Choose a model",
+        "",
         [
             "",
             "Core Python algo(Frequency and Ranking based)",
@@ -22,13 +22,12 @@ if __name__ == "__main__":
             "Text Rank: From Python lib sumy",
         ],
     )
-
-    st.markdown("""---------""")
+    st.sidebar.write('----')
     st.sidebar.subheader('Follow me to know more about AI, ML, DL, Generative AI, Deployment and MLOps')
     with st.sidebar:
         column1, column2 = st.columns(2)
-        column1.markdown("[![Linkedin]('./icons/linkedin.svg')](https://www.linkedin.com/in/shubhammandowara/)")
-        column2.markdown("[![Github]('./icons/github.svg')](https://github.com/ShubhamMandowara)")
+        column1.markdown("[![Linkedin](https://img.icons8.com/material-outlined/48/000000/linkedin.png)](https://www.linkedin.com/in/shubhammandowara/)")
+        column2.markdown("[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/ShubhamMandowara)")
     
     st.info('Ctrl + Enter to get summary OR click anywhere outside once you enter everything', icon="ℹ️")
 
