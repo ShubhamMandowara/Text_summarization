@@ -19,7 +19,7 @@ if __name__ == "__main__":
             "Lex Rank: From Python lib sumy",
             "LSA: From Python lib sumy",
             "Text Rank: From Python lib sumy",
-            "Transformers: Model google/pegasus-xsum"
+            # "Transformers: Model google/pegasus-xsum"
         ],
     )
     
@@ -91,7 +91,7 @@ if __name__ == "__main__":
                     sentence_on_output=no_of_sentence_on_output,
                 )
             )
-        elif model_selection == "Transformers: Model google/pegasus-xsum":
-            st.write(transformers_main(text=text_to_summarize))
+        # elif model_selection == "Transformers: Model google/pegasus-xsum":
+        #     st.write(transformers_main(text=text_to_summarize))
         else:
             st.write("Not entering into any condition")

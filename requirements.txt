@@ -1,6 +1,6 @@
 nltk==3.8.1
 streamlit==1.26.0
 sumy==0.11.0
-transformers==4.32.1
-sentencepiece == 0.1.99
-torch == 2.0.1
+# transformers==4.32.1
+# sentencepiece == 0.1.99
+# torch == 2.0.1
