@@ -8,7 +8,7 @@ if __name__ == "__main__":
     st.set_page_config(layout="wide")
     st.title("Text Summarization ✍️")
     st.sidebar.header(
-        "Its time learn the Summarization using different different model!"
+        "It's time to master Summarization using a variety of models!"
     )
     st.sidebar.subheader("Select a model from the list 👇🏻:")
     model_selection = st.sidebar.selectbox(
@@ -21,9 +21,17 @@ if __name__ == "__main__":
             "Text Rank: From Python lib sumy",
         ],
     )
+    
+    st.sidebar.write("----")
+    st.sidebar.subheader("About this app:")
+    st.sidebar.write(
+        "Designed by **Shubham Mandowara** to showcase text summarization using various techniques. You can select the model, and add text to summarize."
+    )
+    st.sidebar.write("I hope this is helpful. Please feel free to contact me if you have any queries."
+    )
     st.sidebar.write("----")
     st.sidebar.subheader(
-        "Follow me to know more about AI, ML, DL, Generative AI, Deployment and MLOps"
+        "🚀 Follow me for the latest insights on AI, ML, DL, Generative AI, Deployment, and MLOps! Stay ahead of the curve. 📊🤖 #AI #MachineLearning #DeepLearning #Tech"
     )
 
     with st.sidebar:
@@ -34,20 +42,13 @@ if __name__ == "__main__":
         column2.markdown(
             "[![Github](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/ShubhamMandowara)"
         )
-    st.sidebar.write("----")
-    st.sidebar.subheader("About this app:")
-    st.sidebar.write(
-        "Designed by **Shubham Mandowara** to showcase text summarization using various techniques. You can select the model, and add text to summarize."
-    )
-    st.sidebar.write("I Hope you this was helpful, conntect me for any queries"
-    )
 
     st.info(
-        "Ctrl + Enter to get summary OR click anywhere outside once you enter everything",
+        "**Ctrl + Enter** to get summary OR click anywhere outside the input box after entering text",
         icon="ℹ️",
     )
 
-    text_to_summarize = st.text_area("Enter your text to summarize")
+    text_to_summarize = st.text_area("Enter your text to summarize:")
     no_of_sentence_on_output = st.number_input(
         "No. of sentences on output you want", min_value=2, max_value=100
     )
