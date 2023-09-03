@@ -53,6 +53,6 @@ def main(text:str, model_name:str, sentence_on_output:int=2) -> str:
         raise 'Wrong model name / Model name is not defined'
     parser = common_process(text=text)
     summary = summarizer(parser.document,sentence_on_output)
-    return_text = common_return_process(summary=summary)
+    return_text = common_return_process(text=summary)
     return return_text
 
