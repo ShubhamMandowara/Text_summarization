@@ -17,7 +17,7 @@ if __name__ == "__main__":
         [
             "",
             "Core Python algo(Frequency and Ranking based)",
-            "Lax Rank: From Python lib sumy",
+            "Lex Rank: From Python lib sumy",
             "LSA: From Python lib sumy",
             "Text Rank: From Python lib sumy",
         ],
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         if model_selection == "Core Python algo(Frequency and Ranking based)":
             st.write(python_main(text=text_to_summarize, sentence_on_output=no_of_sentence_on_output))
         model_name = model_selection.split(":")[0]
-        if model_selection == "Lax Rank: From Python lib sumy":
+        if model_selection == "Lex Rank: From Python lib sumy":
             st.write(sumy_main(text=text_to_summarize, model_name=model_name, sentence_on_output=no_of_sentence_on_output), )
         if model_selection == "LSA: From Python lib sumy":
             st.write(sumy_main(text=text_to_summarize, model_name=model_name, sentence_on_output=no_of_sentence_on_output))
