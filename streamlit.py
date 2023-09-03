@@ -25,14 +25,20 @@ if __name__ == "__main__":
     st.info('Hit: Ctrl + Enter to get summary OR click anywhere outside after adding and selection everything', icon="ℹ️")
     text_to_summarize = st.text_area("Enter your text to summarize")
     no_of_sentence_on_output = st.number_input('No. of sentences on output you want', min_value=2, max_value=100)
-    st.write("Selected Model: ", model_selection)
+    st.write("Selected Model:- ", model_selection)
     summary = st.write("Summary:")
     if model_selection != "" and text_to_summarize != "" and no_of_sentence_on_output != None:
         if model_selection == "Core Python algo(Frequency and Ranking based)":
+            print('Here :{model_selection}')
             st.write(python_main(text=text_to_summarize, sentence_on_output=no_of_sentence_on_output))
-        if model_selection == "Lex Rank: From Python lib sumy":
+        elif model_selection == "Lex Rank: From Python lib sumy":
+            print('Here :{model_selection}')
             st.write(sumy_main(text=text_to_summarize, model_name='Lex Rank', sentence_on_output=no_of_sentence_on_output), )
-        if model_selection == "LSA: From Python lib sumy":
+        elif model_selection == "LSA: From Python lib sumy":
+            print('Here :{model_selection}')
             st.write(sumy_main(text=text_to_summarize, model_name='LSA', sentence_on_output=no_of_sentence_on_output))
-        if model_selection == "Text Rank: From Python lib sumy":
+        elif model_selection == "Text Rank: From Python lib sumy":
+            print('Here :{model_selection}')
             st.write(sumy_main(text=text_to_summarize, model_name='Text Rank', sentence_on_output=no_of_sentence_on_output))
+        else:
+            st.write('Not entering into any condition'
