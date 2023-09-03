@@ -27,8 +27,8 @@ if __name__ == "__main__":
     st.sidebar.subheader('Follow me to know more about AI, ML, DL, Generative AI, Deployment and MLOps')
     with st.sidebar:
         column1, column2 = st.columns(2)
-        column1.markdown("[![Linkedin](https://icons8.com/icon/xuvGCOXi8Wyg/linkedin)](https://www.linkedin.com/in/shubhammandowara/)")
-        column2.markdown("[![Github](https://icons8.com/icon/WCL5hPLvhUjQ/github)](https://github.com/ShubhamMandowara)")
+        column1.markdown("[![Linkedin]('icons/linkedin.svg')](https://www.linkedin.com/in/shubhammandowara/)")
+        column2.markdown("[![Github]('icons/github.svg)](https://github.com/ShubhamMandowara)")
     
     st.info('Ctrl + Enter to get summary OR click anywhere outside once you enter everything', icon="ℹ️")
 
