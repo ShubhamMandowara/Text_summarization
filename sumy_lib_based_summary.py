@@ -9,6 +9,7 @@ import nltk
 from typing import List
 
 nltk.download("punkt")
+logger = get_logger(__name__)
 
 
 def common_process(text: str)-> str:
