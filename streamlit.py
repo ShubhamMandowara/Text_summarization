@@ -14,9 +14,11 @@ if __name__ == "__main__":
     st.sidebar.header("Select a model from the list 👇🏻:")
     
     st.sidebar.markdown('Follow me on linked to know more about AI, ML, DL, Generative AI, Deployment and MLOps')
-    column1, column2 = st.sidebar.columns(2)
-    column1.sidebar.markdown("[![Linkedin](https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-vkm0drb1.png)(https://www.linkedin.com/in/shubhammandowara/)")
-    column2.sidebar.markdown("[![Linkedin](https://static-00.iconduck.com/assets.00/linkedin-icon-512x512-vkm0drb1.png)(https://www.linkedin.com/in/shubhammandowara/)")
+    
+    with st.sidebar:
+        column1, column2 = st.sidebar.columns(2)
+        column1.markdown("[![Linkedin]('https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg')]('https://www.linkedin.com/in/shubhammandowara/')")
+        column2.markdown("[![Github]('https://img.icons8.com/material-outlined/48/000000/github.png')]('https://github.com/ShubhamMandowara')")
     model_selection = st.sidebar.selectbox(
         "Choose a model",
         [
