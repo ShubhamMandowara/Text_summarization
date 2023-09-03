@@ -44,11 +44,8 @@ if __name__ == "__main__":
         )
 
     st.info(
-        "**Ctrl + Enter** to get summary OR click anywhere outside the input box after entering text",
-        icon="ℹ️",
-    )
-    st.info(
-        "**Select model from the left sidebase list **",
+        """**Ctrl + Enter** to get summary OR click anywhere outside the input box after entering text \n
+        **Select a model from the left sidebar list**""",
         icon="ℹ️",
     )
 
