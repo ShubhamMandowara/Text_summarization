@@ -1,2 +1,3 @@
 nltk==3.8.1
 streamlit==1.26.0
+sumy==0.11.0
