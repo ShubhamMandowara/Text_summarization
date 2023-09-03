@@ -35,7 +35,7 @@ def main(text, model_name, sentence_on_output:int=2) -> str:
         Returns:
             str: Summary of text
     """
-    if model_name == 'Lex rank':
+    if model_name == 'Lex Rank':
         summarizer = LexRankSummarizer()
     elif model_name == 'LSA':
         summarizer = LsaSummarizer()
