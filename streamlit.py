@@ -41,4 +41,4 @@ if __name__ == "__main__":
             print('Here :{model_selection}')
             st.write(sumy_main(text=text_to_summarize, model_name='Text Rank', sentence_on_output=no_of_sentence_on_output))
         else:
-            st.write('Not entering into any condition'
+            st.write('Not entering into any condition')
