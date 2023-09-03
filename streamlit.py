@@ -30,10 +30,9 @@ if __name__ == "__main__":
     if model_selection != "" and text_to_summarize != "" and no_of_sentence_on_output != None:
         if model_selection == "Core Python algo(Frequency and Ranking based)":
             st.write(python_main(text=text_to_summarize, sentence_on_output=no_of_sentence_on_output))
-        model_name = model_selection.split(":")[0]
         if model_selection == "Lex Rank: From Python lib sumy":
-            st.write(sumy_main(text=text_to_summarize, model_name=model_name, sentence_on_output=no_of_sentence_on_output), )
+            st.write(sumy_main(text=text_to_summarize, model_name='Lex Rank', sentence_on_output=no_of_sentence_on_output), )
         if model_selection == "LSA: From Python lib sumy":
-            st.write(sumy_main(text=text_to_summarize, model_name=model_name, sentence_on_output=no_of_sentence_on_output))
+            st.write(sumy_main(text=text_to_summarize, model_name='LSA', sentence_on_output=no_of_sentence_on_output))
         if model_selection == "Text Rank: From Python lib sumy":
-            st.write(sumy_main(text=text_to_summarize, model_name=model_name, sentence_on_output=no_of_sentence_on_output))
+            st.write(sumy_main(text=text_to_summarize, model_name='Text Rank', sentence_on_output=no_of_sentence_on_output))
