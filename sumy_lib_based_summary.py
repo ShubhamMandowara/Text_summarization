@@ -35,6 +35,7 @@ def main(text, model_name, sentence_on_output:int=2) -> str:
         Returns:
             str: Summary of text
     """
+    summarizer = None
     if model_name == 'Lex Rank':
         summarizer = LexRankSummarizer()
     elif model_name == 'LSA':
@@ -45,5 +46,7 @@ def main(text, model_name, sentence_on_output:int=2) -> str:
         raise 'Wrong model name / Model name is not defined'
     parser = common_process(text=text)
     summary = summarizer(parser.document,sentence_on_output)
-    return common_return_process(summary=summary)
+    return_text = common_return_process(summary=summary)
+    print(return_text)
+    return return_text
 
