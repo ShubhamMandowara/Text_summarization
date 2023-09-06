@@ -49,6 +49,7 @@ if __name__ == "__main__":
         **Select a model from the left sidebar list**""",
         icon="ℹ️",
     )
+    st.write('Youtube : [Dive into the code"s secrets in a captivating video journey!](https://youtu.be/s3WQW1Cd8eo?si=nU1dEhFnylqBf345')
 
     text_to_summarize = st.text_area("Enter your text to summarize:")
     no_of_sentence_on_output = st.number_input(
